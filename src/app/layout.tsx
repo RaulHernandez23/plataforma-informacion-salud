@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,9 @@ export default function RootLayout({
         
         {/* HEADER: siempre visible */}
         <Header />
+
+        {/* NAVBAR */}
+        <Navbar />
 
         {/* CONTENIDO VARIABLE (cada page.tsx) */}
         <main className="flex-1 flex items-center justify-center p-6">

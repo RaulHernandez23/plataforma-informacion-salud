@@ -1,31 +1,33 @@
 "use client";
 
 export default function GeneralPage() {
-  return (
-    <section className="w-full max-w-7xl bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+    return (
+        <section>
 
-      {/* HEADER DE LA PÁGINA */}
-      <div className="px-6 py-4 border-b border-slate-100 bg-slate-50">
-        <h1 className="text-xl font-semibold text-slate-800">
-          Panorama general
-        </h1>
-        <p className="mt-1 text-sm text-slate-600">
-          Visualización general de los principales indicadores disponibles en la
-          Plataforma de Información en Salud.
-        </p>
-      </div>
+            {/* HEADER DE LA VISUALIZACION */}
+            <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center">
+                <h2 className="text-xl font-semibold text-slate-800">
+                    Análisis general
+                </h2>
+                <p className="mt-1 text-sm text-slate-600">
+                    Indicadores de defunciones a nivel nacional
+                </p>
+                <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+            </div>
 
-      {/* CONTENIDO */}
-      <div className="w-full h-[600px] lg:h-[calc(100vh-220px)] bg-slate-100 relative">
-        <iframe
-          title="Dashboard Panorama General"
-          src="AQUÍ_VA_TU_LINK_DE_POWER_BI_GENERAL"
-          className="absolute inset-0 w-full h-full"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </div>
-
-    </section>
-  );
+            {/* CONTENIDO */}
+            <div className="w-full h-[600px] lg:h-[calc(100vh-180px)] bg-slate-100 relative">
+                <iframe
+                    title="Dashboard General"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMjkwMjg0ZjgtN2FmMi00ZDI3LWE3NGMtNmQ1YjZmYmE3NDI2IiwidCI6IjNjOTA3NjUxLWQ4YzYtNGNhNi1hOGE0LTZhMjQyNDMwZTY1MyIsImMiOjR9&pageName=2c4887f06048c91a8866"
+                    className="w-full h-full absolute inset-0"
+                    frameBorder="0"
+                    allowFullScreen
+                />
+            </div>
+        </section>
+    );
 }
